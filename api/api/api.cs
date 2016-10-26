@@ -125,7 +125,14 @@ namespace BrightLocalWrapper
         {
             api_key = key;
             api_secret = secret;
+            
+        } 
 
-        }       
+        public class Parameters : Dictionary<string, object>
+        {
+
+        }
+
+
     }
 }
