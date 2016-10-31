@@ -69,7 +69,7 @@ namespace BrightLocalWrapper
 
             var parameters = new api.Parameters();
             parameters.Add("q", "My Sample Query");            
-            var success = request.Put("v1/clients-and-locations/clients/search", parameters);
+            var success = request.Get("v1/clients-and-locations/clients/search", parameters);
             // desereialize response 
             dynamic obj = JsonConvert.DeserializeObject(success.Content);
 
