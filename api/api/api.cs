@@ -1,4 +1,5 @@
-﻿using RestSharp;
+﻿using Newtonsoft.Json;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -56,7 +57,8 @@ namespace BrightLocalWrapper
             var request = GetApiRequest(method, endPoint, this.api_key, sig, expires, apiParameters);
             // execure the request
             var response = client.Execute(request);
-
+            // deserialize the response
+            dynamic obj = JsonConvert.DeserializeObject(response.Content);
             return response;
 
 
