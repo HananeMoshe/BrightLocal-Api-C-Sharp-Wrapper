@@ -6,4 +6,6 @@ A c# wrapper class for consuming The Bright Local api. Automatically generates t
 ##Dependencies
 
 It is recommended you install the following dependencies via NuGet.
+
 1. RestSHarp -  Install-Package RestSharp | Git: https://github.com/restsharp/RestSharp
+
